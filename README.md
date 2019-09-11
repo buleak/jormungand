@@ -64,23 +64,23 @@ git reflog
 
 ### 丢弃工作区修改   (还原) 
 git checkout -- fileName  (用版本库里的版本替换工作区的版本)
-提交到暂存区又修改 ---> 和暂存区一样
-还没有提交到暂存区 ---> 和版本库一样 
+> 提交到暂存区又修改 ---> 和暂存区一样
+> 还没有提交到暂存区 ---> 和版本库一样 
 
 ### 版本回退
-git reset HEAD                      ---> 暂存区回退到工作区 
-git reset --hard HEAD^              ---> 版本库回退到上一版本
-git reset --hard HEAD^^             ---> 版本库回退到上二版本
-git reset --hard HEAD~100           ---> 版本库回退到上 100版本
-git reset --hard 1094a (commit id)  ---> 版本库回退到指定版本
+- git reset HEAD                      ---> 暂存区回退到工作区 
+- git reset --hard HEAD^              ---> 版本库回退到上一版本
+- git reset --hard HEAD^^             ---> 版本库回退到上二版本
+- git reset --hard HEAD~100           ---> 版本库回退到上 100版本
+- git reset --hard 1094a (commit id)  ---> 版本库回退到指定版本
 
 ### 创建分支
-git switch -c devName       ---> 创建并切换分支
-git switch devName          ---> 切换分支
-git branch                  ---> 查看分支
-git branch devName          ---> 创建分支
-git branch -d devName       ---> 删除分支
-git branch -D devName       ---> 强行删除分支
-git merge devName           ---> 合并分支  
-git merge --no-ff devName   ---> 合并分支, 禁止使用 Fast forward模式 
+- git switch -c devName       ---> 创建并切换分支
+- git switch devName          ---> 切换分支
+- git branch                  ---> 查看分支
+- git branch devName          ---> 创建分支
+- git branch -d devName       ---> 删除分支
+- git branch -D devName       ---> 强行删除分支
+- git merge devName           ---> 合并分支  
+- git merge --no-ff devName   ---> 合并分支, 禁止使用 Fast forward模式 
 
