@@ -34,13 +34,16 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### 创建 Git仓库 ((.git 版本库))
 git init
 
-### 添加文件到 Git仓库 
-git add *
+### 添加文件到 Git仓库 ((暂存区))
+- git add *
+- git add -A   ---> 提交所有变化
+- git add .    ---> 提交更新 & 新增的文件
+- git add -u   ---> 提交更新 & 删除的文件 
 
-### 删除 Git仓库的文件
+### 删除 Git仓库的文件 ((暂存区))
 git rm *
 
-### 提交文件到 Git仓库
+### 提交文件到 Git仓库 ((当前分支))
 git commit -m '修改说明'
 
 ### 关联远程仓库
