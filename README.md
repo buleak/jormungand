@@ -59,7 +59,8 @@ git push -u origin master   ---> 首次推送加上 -u
 git status
 
 ### 查看提交日志
-git log 
+git log
+ 
 git log --pretty=oneline
 
 ### 查看命令日志
