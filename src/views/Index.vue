@@ -1,25 +1,13 @@
 <template>
   <div class="page">
     <el-row>
-      <el-col class="header">
+      <el-col class="head">
         <el-avatar :src="avatarUrl" circle></el-avatar>
         <div>{{ $route.params.userName }}</div>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :span="24" class="module module1">1</el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="24" class="module module2">2</el-col>
-    </el-row>
-    <el-row :gutter="10">
-      <el-col :span="12" class="module module3">111</el-col>
-      <el-col :span="12" class="module module4">111</el-col>
-    </el-row>
-    <el-row :gutter="10">
-      <el-col :span="12" class="module module5">222</el-col>
-      <el-col :span="12" class="module module6">222</el-col>
-    </el-row>
+    <!-- <el-row> <el-col :span="24" class="module module1">1</el-col> </el-row> -->
+
   </div>
 </template>
 
@@ -66,5 +54,9 @@ export default Vue.extend({
   }
   .module6 {
     background: url("https://image.xuexiwangzhe.com/FqHn4ZxOKkOLS30AtJiMjRP_cnJO") 0 0/100% 100% no-repeat;
+  }
+  /* --- */
+  .head {
+    margin-top: 50px;
   }
 </style>
