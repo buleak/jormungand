@@ -17,3 +17,7 @@ import Register from "@/components/Register.vue"; // @ is an alias to /src
 })
 export default class Home extends Vue {}
 </script>
+
+<style>
+
+</style>

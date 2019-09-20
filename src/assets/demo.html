@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Webfont Demo</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>webfont 字体预览</h1>
+        <p class="web-font">英雄难过美人关，我不是英雄，美人让我过了关</p>
+
+
+        <div class="helps">
+            第一步：使用font-face声明字体
+            <pre>
+@font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('webfont.eot'); /* IE9 */
+    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('webfont.woff2') format('woff2'),
+    url('webfont.woff') format('woff'), /* chrome、firefox */
+    url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+</pre>
+第二步：定义使用 webfont 的样式
+            <pre>
+.web-font {
+    font-family: "webfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+</pre>
+第三步：为文字加上对应的样式
+<pre>
+&lt;i class="web-font"&gt;英雄难过美人关，我不是英雄，美人让我过了关&lt;/i&gt;
+</pre>
+        </div>
+
+    </div>
+</body>
+</html>

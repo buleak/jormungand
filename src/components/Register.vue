@@ -1,5 +1,5 @@
 <template>
-  <el-form ref="ruleForm" :model="ruleForm" :rules="rules" label-position="right" label-width="100px" class="demo-ruleForm">
+  <el-form ref="ruleForm" :model="ruleForm" :rules="rules" label-position="left" label-width="80px" class="demo-ruleForm register">
     <el-form-item label="用户名" prop="userName">
       <el-input v-model="ruleForm.userName"></el-input>
     </el-form-item>
@@ -13,8 +13,10 @@
       </el-select>
     </el-form-item>
     <el-form-item>
-      <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
-      <el-button type="primary" @click="resetForm('ruleForm')">取消</el-button>
+      <el-button type="primary" plain @click="submitForm('ruleForm')" icon="el-icon-upload">提交</el-button>
+      <!-- <el-button type="warning" @click="resetForm('ruleForm')" icon="el-icon-close">取消</el-button>
+      <el-button type="warning" round icon="el-icon-s-goods">取消</el-button> -->
+      <el-button type="success" @click="resetForm('ruleForm')" circle icon="el-icon-delete"></el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -30,7 +32,7 @@
         rules: {
           userName: [
             {type: 'string', required: true, message: '请输入姓名', trigger: 'blur'},
-            {min: 1, max: 5, message: '长度在3~5之间', trigger: 'blur'}
+            {min: 1, max: 20, message: '长度在1~20之间', trigger: 'blur'}
           ],
           passWord: [
             {required: true, message: '请输入密码', trigger: 'blur'},
@@ -54,6 +56,14 @@
               }
             }).then(res => {
               console.log(res.data)
+              if(res.data.msg === 'OK') {
+                this.$router.push({
+                  name: 'index',
+                  params: {
+                    userName: res.data.userName
+                  }
+                })
+              }
             }).catch(err => {
               console.error('ERROR:', err)
             })
@@ -71,7 +81,12 @@
 </script>
 
 <style scoped>
+.register {
+  padding: 20px;
+}
+.el-select,
 .el-form-item__content {
   width: 100%;
 }
+ 
 </style>

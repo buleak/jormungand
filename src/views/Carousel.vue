@@ -1,6 +1,6 @@
 <template>
   <div class="block">
-    <el-carousel height="150px" trigger="click" indicator-position="outside" arrow="always" :interval="3000" type="card" direction="vertical">
+    <el-carousel height="150px" trigger="click" indicator-position="outside" arrow="always" :interval="3000" type="card" direction="horizontal">
       <el-carousel-item v-for="(item, index) of carouselList" :key="index">
         <h3 class="small">{{index}}-{{item}}</h3>
       </el-carousel-item>

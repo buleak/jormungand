@@ -19,9 +19,43 @@ export default new Router({
       component: () => import("./views/About.vue")
     },
     {
+      path: "/index/:userName",
+      name: "index",
+      component: () => import("./views/Index.vue")
+    },
+    {
       path: "/carousel",
       name: "carousel",
       component: () => import("./views/Carousel.vue")
+    },
+    {
+      path: "/basic",
+      name: "basic",
+      component: () => import("./views/Basic.vue"),
+      children: [
+        {
+          path: "layout",
+          name: "layout",
+          component: () => import("./components/basic/Layout.vue")
+        },
+        {
+          path: "container",
+          name: "container",
+          component: () => import("./components/basic/Container.vue")
+        }
+      ]
+    },
+    {
+      path: "/form",
+      name: "form",
+      component: () => import("./views/Form.vue"),
+      children: [
+        {
+          path: "option",
+          name: "option",
+          component: () => import("./components/form/Option.vue")
+        }
+      ]
     }
   ]
 });
