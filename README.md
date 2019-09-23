@@ -89,3 +89,32 @@ git checkout -- fileName  (用版本库里的版本替换工作区的版本)
 - git merge devName           ---> 合并分支  
 - git merge --no-ff devName   ---> 合并分支, 禁止使用 Fast forward模式 
 
+---
+## 父子组件通讯
+
+1. props: 父组件单向传递数据到子组件
+   ```
+   子组件通过 props: 获取父组件传递来的数据
+   father:
+    <Son :propName="value">
+
+   son:
+    props: [propName]
+   ```
+2. $emit('onName', value)
+   ```
+   子组件点击按钮触发监听事件，
+   父组件监听事件，当事件触发后，执行方法
+   father:
+    <Son @onName='fatherMethod'>
+    fatherMethod(val) {
+      console.log(val)
+    }
+
+   son:
+    <button @click='method'>点击</button>
+
+    method() {
+      $emit('onName', value)
+    }
+   ```

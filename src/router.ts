@@ -19,6 +19,11 @@ export default new Router({
       component: () => import("./views/About.vue")
     },
     {
+      path: "/father",
+      name: "father",
+      component: () => import("./views/prop/Father.vue")
+    },
+    {
       path: "/index/:userName",
       name: "index",
       component: () => import("./views/Index.vue")

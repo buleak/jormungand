@@ -3,6 +3,7 @@
     <div class="router-group">
       <router-link to="/">注册</router-link> | 
       <router-link to="/about">About</router-link> |
+      <router-link to="/father">父子组件传参</router-link> |
       <router-link to="/basic">基础</router-link> |
       <router-link to="/form">表单</router-link> |
       <router-link to="/carousel">轮播图</router-link> 
