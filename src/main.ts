@@ -4,8 +4,6 @@ import store from "./store";
 import axios from "axios";
 import router from "./router";
 import "./plugins/element.js";
-// import VueSocketIO from "vue-socket.io";
-// import socketio from "socket.io-client";
 
 // Vue.use(VueSocketIO, socketio("http://localhost:3000"));
 Vue.prototype.$http = axios;

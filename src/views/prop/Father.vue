@@ -1,10 +1,10 @@
 <template>
   <div>
-    father: {{num}} <br>
-    father: {{title}}
+    father: {{ num }} <br />
+    father: {{ title }}
     <!-- 父传子 :count="count", 子组件使用 props: [count]接收 -->
     <div>------------------------------------------</div>
-    <Son :count="count" :title.sync="title" @father="receiveSon" /> 
+    <Son :count="count" :title.sync="title" @father="receiveSon" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       num: 0,
-      title: '.sync',
+      title: ".sync",
       count: "this is father.vue"
     };
   },

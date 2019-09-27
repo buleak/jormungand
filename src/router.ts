@@ -61,6 +61,11 @@ export default new Router({
           component: () => import("./components/form/Option.vue")
         }
       ]
-    }
+    },
+    /* {
+      path: "/socket",
+      name: "socket",
+      component: () => import("./views/socket/socket.vue")
+    } */
   ]
 });

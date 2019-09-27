@@ -1,17 +1,17 @@
 <template>
-<!-- 
-  :span                            共计24格 
+  <!--
+  :span                            共计24格
   :gutter                          间隔
-  :offset                          偏移 
-  type="flex"                      采用flex布局 
+  :offset                          偏移
+  type="flex"                      采用flex布局
   justify                          水平排列方式
   align                            垂直排列方式
   tag                              自定义元素标签
-  :xs   :sm   :md    :lg    :xl    响应式  
+  :xs   :sm   :md    :lg    :xl    响应式
   <768  <992  <1200  <1920  >1920
 -->
-<!-- 
-  import 'element-ui/lib/theme-chalk/display.css'  基于断点的隐藏类 
+  <!--
+  import 'element-ui/lib/theme-chalk/display.css'  基于断点的隐藏类
   hidden-xs-only                                   当视口在 xs 尺寸时隐藏
   hidden-sm-only                                   当视口在 sm 尺寸时隐藏
   hidden-md-only                                   当视口在 md 尺寸时隐藏
@@ -27,7 +27,9 @@
   <div>
     <el-row :gutter="5">
       <el-col :span="6" class="grid-content bg-purple-dark">1</el-col>
-      <el-col :span="12" :offset="3" class="grid-content bg-purple-dark">2</el-col>
+      <el-col :span="12" :offset="3" class="grid-content bg-purple-dark"
+        >2</el-col
+      >
       <el-col :span="3" class="grid-content bg-purple-dark">3</el-col>
     </el-row>
     <el-row>
@@ -75,4 +77,3 @@ export default Vue.extend({});
   background-color: #f9fafc;
 }
 </style>
-

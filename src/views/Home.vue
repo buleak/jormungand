@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    
+
     <Register msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
@@ -18,6 +18,4 @@ import Register from "@/components/Register.vue"; // @ is an alias to /src
 export default class Home extends Vue {}
 </script>
 
-<style>
-
-</style>
+<style></style>

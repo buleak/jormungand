@@ -1,0 +1,33 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <label for=""><span>Write:</span><input type="text"></label>
+    <button onclick="send">发送</button>
+  </div>
+
+  <script src="https://cdn.bootcss.com/socket.io/2.2.0/socket.io.dev.js"></script>
+  <script>
+    let so = io('http://localhost')
+
+    so.on('connect', () => { // 监听 Socket连接
+      console.log(so.id)
+      so.send(`client: ${so.id} pass information`) // 发送消息
+      so.emit('eventName', `send event: 协议版本号___${so.protocol}`)
+    })
+    so.on('disconnect', () => { // 监听 Socket断开
+      so.open() // 打开 Socket
+      so.connect() // 等同于 so.open()
+    })
+    let send = () => {
+      so.emit('msg', 'client~~~~~~~~~')
+    }
+  </script>
+</body>
+</html> -->

@@ -11,16 +11,14 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      radio: '2'
-    }
+      radio: "2"
+    };
   }
-})
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
